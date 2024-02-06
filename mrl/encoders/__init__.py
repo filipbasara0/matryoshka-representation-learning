@@ -1,0 +1,1 @@
+from mrl.encoders.models import resnet18, resnet50
