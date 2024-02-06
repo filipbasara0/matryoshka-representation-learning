@@ -10,7 +10,7 @@ Models are pretrained on training subsets - for `CIFAR10` 50,000 and for `STL10`
 1. `CIFAR10` - 50,000 train images on ReLIC
 2. `STL10` - features were learned on 100k unlabeled images. LogReg was trained on 5k train images and evaluated on 8k test images.
 
-Linear probing was used for evaluating on features extracted from encoders using the scikit LogisticRegression model. The table below shows training configuration and results when using the full dimension. Plots below show results accross dimensions.
+Linear probing was used for evaluating on features extracted from encoders using the scikit LogisticRegression model. The table below shows training configurations and results when using the full dimension. Plots below show results accross dimensions.
 
 More detailed evaluation steps and results for [CIFAR10](https://github.com/filipbasara0/matryoshka-representation-learning/blob/main/notebooks/linear-probing-cifar.ipynb) and [STL10](https://github.com/filipbasara0/matryoshka-representation-learning/blob/main/notebooks/linear-probing-stl.ipynb) can be found in the notebooks directory. 
 
