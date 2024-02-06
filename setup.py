@@ -13,7 +13,7 @@ def read_long_description():
 setup(
     name = 'mrl-pytorch',
     packages = find_packages(exclude=['notebooks']),
-    version = '0.1.0',
+    version = '0.1.1',
     license='MIT',
     description = 'An unofficial implementation of Matryoshka Representation Learning for contrastive self-supervised learning',
     author = 'Filip Basara',
