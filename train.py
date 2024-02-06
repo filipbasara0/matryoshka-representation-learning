@@ -47,7 +47,7 @@ def train_relic(args):
 
     summary(relic_model, input_size=[(1, 3, 32, 32), (1, 3, 32, 32)])
 
-    params = list(relic_model.online_encoder.parameters() + relic_model.t_prime)
+    params = list(relic_model.online_encoder.parameters()) + [relic_model.t_prime]
     optimizer = torch.optim.Adam(params,
                                  lr=args.learning_rate,
                                  weight_decay=args.weight_decay)
