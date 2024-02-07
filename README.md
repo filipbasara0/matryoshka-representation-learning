@@ -12,6 +12,8 @@ Models are pretrained on training subsets - for `CIFAR10` 50,000 and for `STL10`
 
 Linear probing was used for evaluating on features extracted from encoders using the scikit LogisticRegression model. The table below shows training configurations and results when using the full dimension. Plots below show results accross dimensions.
 
+All experiments were done using the `MRL-E` (efficient) version; using the full MRL layer would significantly improve the results especially for lower dimensions (< 100), but would require more time to train.
+
 More detailed evaluation steps and results for [CIFAR10](https://github.com/filipbasara0/matryoshka-representation-learning/blob/main/notebooks/linear-probing-cifar.ipynb) and [STL10](https://github.com/filipbasara0/matryoshka-representation-learning/blob/main/notebooks/linear-probing-stl.ipynb) can be found in the notebooks directory. 
 
 | Evaulation model    | Dataset | Feature Extractor| Encoder   | Feature dim | Projection Head dim | Epochs | Top1 % |
@@ -20,13 +22,16 @@ More detailed evaluation steps and results for [CIFAR10](https://github.com/fili
 | LogisticRegression  | STL10   | ReLIC            | ResNet-18 | 512         | 64                  | 400    | 81.55  |
 | LogisticRegression  | STL10   | ReLIC            | ResNet-50 | 2048        | 64                  | 100    | 77.10  |
 
-Below is the performance accross dimension for the ResNet18 model on the CIFAR10 dataset:
 
-![image](https://github.com/filipbasara0/matryoshka-representation-learning/assets/29043871/0a25f5f4-b474-48e1-8314-6eafa90a942a)
+Below is the performance accross dimension for the ResNet18 model on the STL10 dataset compared to applying PCA transformations on the full dimension (512 for Resnet18):
 
-Below is the performance accross dimension for the ResNet18 model on the STL10 dataset:
+![image](https://github.com/filipbasara0/matryoshka-representation-learning/assets/29043871/b4e409ae-edcc-4bfc-b618-64e700621091)
 
-![image](https://github.com/filipbasara0/matryoshka-representation-learning/assets/29043871/e6aa56cc-00df-4bf6-b3c4-7dd7327a63db)
+
+Below is the performance accross dimension for the ResNet18 model on the CIFAR10 dataset compared to applying PCA transformations on the full dimension (512 for Resnet18):
+
+![image](https://github.com/filipbasara0/matryoshka-representation-learning/assets/29043871/16ff4fef-08ab-42aa-8224-0c8444e45a81)
+
 
 # Usage
 
