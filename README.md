@@ -20,15 +20,21 @@ More detailed evaluation steps and results for [CIFAR10](https://github.com/fili
 |---------------------|---------|------------------|-----------|-------------|---------------------|--------|--------|
 | LogisticRegression  | CIFAR10 | ReLIC            | ResNet-18 | 512         | 64                  | 400    | 84.19  |
 | LogisticRegression  | STL10   | ReLIC            | ResNet-18 | 512         | 64                  | 400    | 81.55  |
-| LogisticRegression  | STL10   | ReLIC            | ResNet-50 | 2048        | 64                  | 100    | 77.10  |
+| LogisticRegression  | STL10   | ReLIC            | ResNet-50 | 2048        | 64                  | 400    | 86.34  |
+
+### ResNet50
+Below is the performance accross dimension for the ResNet50 model on the STL10 dataset compared to applying PCA transformations:
+
+![image](https://github.com/filipbasara0/matryoshka-representation-learning/assets/29043871/bc730f2a-7bc8-4975-b294-68992d1605fa)
 
 
-Below is the performance accross dimension for the ResNet18 model on the STL10 dataset compared to applying PCA transformations on the full dimension (512 for Resnet18):
+### ResNet18 
+Below is the performance accross dimension for the ResNet18 model on the STL10 dataset compared to applying PCA transformations:
 
 ![image](https://github.com/filipbasara0/matryoshka-representation-learning/assets/29043871/b4e409ae-edcc-4bfc-b618-64e700621091)
 
 
-Below is the performance accross dimension for the ResNet18 model on the CIFAR10 dataset compared to applying PCA transformations on the full dimension (512 for Resnet18):
+Below is the performance accross dimension for the ResNet18 model on the CIFAR10 dataset compared to applying PCA transformations:
 
 ![image](https://github.com/filipbasara0/matryoshka-representation-learning/assets/29043871/16ff4fef-08ab-42aa-8224-0c8444e45a81)
 
